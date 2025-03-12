@@ -28,11 +28,11 @@ function renderizarAmigos() {
     listaAmigos.innerHTML = ""; // Limpiar la lista antes de renderizar
 
     // Asignar el contenido HTML de la lista de amigos
-listaAmigos.innerHTML = amigo
-    // Usar el método `map` para transformar cada nombre en un elemento <li>
-    .map((nombre) => `<li>${nombre}</li>`)
-    // Unir todos los elementos del array en un solo string usando `join`
-    .join("");
+    listaAmigos.innerHTML = amigo
+        // Usar el método `map` para transformar cada nombre en un elemento <li>
+        .map((nombre) => `<li>${nombre}</li>`)
+        // Unir todos los elementos del array en un solo string usando `join`
+        .join("");
 }
 
 function sortearAmigoPiedra() {
@@ -48,6 +48,6 @@ function sortearAmigoPiedra() {
                         Paga con un corto de tequila al secoooo 🥂!!!!!`;
 
     // Limpiar la lista de amigos después del sorteo
-    let limpiarLista = document.getElementById("listaAmigos");
-    limpiarLista.innerHTML = "";
+    amigo = []; // Vaciar el array de amigos
+    renderizarAmigos(); // Actualizar la lista visual
 }
